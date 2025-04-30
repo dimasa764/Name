@@ -1,0 +1,55 @@
+ 
+        @keyframes move-background {
+          from { transform: translateX(101vw); }
+         to { transform: translateX(calc(-101vw )); }
+        }
+        @keyframes move-backgrounds {
+          from { transform: translateX(101vw); }
+          to { transform: translateX(calc(-101vw )); }
+        }
+
+.clouds { content: " ";
+    position: absolute; 
+   
+
+   
+   
+    pointer-events: none;
+    z-index: 3;
+    opacity: 1;overflow: visible;
+        
+}
+        #cld {
+        
+          position: absolute;
+       
+          top:0px;left:0px;right: 0px; bottom: 0px;
+          background-color:transparent;
+          width: 100vw;
+          height: 100vw;overflow: visible;
+          
+ 
+        }
+        .Secclouds { content: " ";
+    position: absolute; 
+   
+
+   
+   
+    pointer-events: none;
+    z-index: 3;
+    opacity: 1;overflow: visible;
+        
+}
+        #cld2 {
+        
+          position: absolute;
+       
+          top:0px;left:0px;right: 0px; bottom: 0px;
+          background-color:transparent;
+          width: 100vw;
+          height: 100vw;overflow: visible;
+          
+ 
+        }
+   

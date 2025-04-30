@@ -1,0 +1,225 @@
+body {overflow: hidden;
+
+    background:  rgb(0, 0, 0);
+}
+
+
+.strap{ 
+    
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  
+  
+    bottom: 30%;left: 5%;text-align: center;  gap: 2px;
+
+border: 20px solid rgb(48, 39, 39, 0.3);
+width: 25%;aspect-ratio: 1/1;
+
+
+background-color: rgb(104, 101, 98);
+align-content: center;
+flex-wrap: wrap ;
+
+transition: opacity 1s;
+font-size: largers;position: absolute;
+transition: border 0.5s , background-color 0.5s ease;
+}
+
+
+.strap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("image/задник.png");
+    background-position: center;
+    background-size: cover;
+    
+    opacity: 0.5;
+    transition: opacity 1s;
+  }.op::before{background-image:url("image/задник.png") ; opacity: 0.3; 
+transition: opacity 0.5s;}
+
+.op{ background-color: rgba(0, 0, 0, 0.34); 
+    border: 20px solid rgb(37, 32, 32);
+transition: border 0.5s , background-color 0.5s ease-out;}
+
+.list-image {position: relative; 
+    width: 60%; 
+    height: 60%;
+    top:0px;
+    opacity:0;
+    transition: opacity 1s ease-out;
+  }
+        .fill {
+          clip-path: inset(100% 0 0 0);
+          transition: clip-path 1s ease-in-out;
+        }
+        
+        .image_fill {z-index: 4;
+          clip-path: inset(0 0 0 0);
+         }
+
+
+.faith{box-sizing: border-box; display: flex;
+    position: relative;
+ 
+    width: 90%; margin: 10px ;
+   aspect-ratio: 1/1;
+    border: 10px solid;border-width:10px ;
+    margin:auto;
+    opacity:0.05;
+    transition: opacity 0.5s background-color 0.5s ease border-width 1s;
+}
+
+.op1{background-color:rgba(104, 101, 98,0.9) ; 
+    opacity: 1; transition: opacity 0.5s background-color 0.5s ease border-width 5s ease ;
+border-width:3px;}
+
+
+  
+  .under { align-content: center;text-align: center;user-select: none;
+    position: absolute;
+    
+    height: 9vmax;
+    width: 100%;
+
+           
+            background-color: #222020;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: transparent; 
+            opacity: 0.34;
+            text-decoration: none;
+
+    font-weight: bold; bottom: 0px;
+    font-size: 3eM;left: 0px;   transition: all 0.3s ease;}
+  
+
+  .under a {
+    color: transparent; align-content: center;
+    text-decoration: none;text-align: center;
+    
+    transition: all 0.3s ease;}
+
+
+  .under:hover,
+  .under:hover a {
+    color: rgb(182, 176, 176);
+    opacity: 1;
+    text-shadow: 0 0 10px rgb(61, 59, 59), 0 0 20px white;}
+  
+  .lightning {
+    font-size: 4em;
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 20px white;
+    opacity: 1;
+    transition: blink 0,4  , all 0.3s ease;
+  }                             .grim a {text-shadow: none;}
+
+
+
+
+
+  .drop {
+    position: absolute;
+    bottom: 100%;
+    width: 15px;
+    height: 120px;
+    pointer-events: none;
+    animation: drop 0.5s linear infinite;
+    transform-origin: center;
+  }
+
+
+  @keyframes drop {
+    0% {
+      transform: translate(0px, 0vh) rotate(20deg);
+    }
+    75% {
+      transform: translate(-500px, 90vh) rotate(20deg);
+    }
+    100% {
+      transform: translate(-1000px, 90vh) rotate(20deg);
+    }
+  }
+
+
+
+  .splat {
+    width: 15px;
+    height: 10px;
+    border-top: 2px dotted rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(0);
+    animation: splat 0.5s linear infinite;
+    display: none;
+  }
+  
+  body.splat-toggle .splat {
+    display: block;
+  }
+  
+  @keyframes splat {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    90% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+
+  .stem {
+    width: 0.2vw;
+    height: 1.5vw;
+    margin-left: 7px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.342));
+    animation: stem 0.5s linear infinite;
+  }
+  
+  @keyframes stem {
+    0% {        opacity: 1;}
+    65% {       opacity: 1;}
+    75% {       opacity: 0;}
+    100% {      opacity: 0;}
+  }
+
+  .text_field{content:"";position:absolute;
+    background-color:rgb(51, 50, 49);
+    left:35%;bottom: 37%;opacity: 0;
+    width:40%;height: 37%;
+    transition: opacity 0.3s ease-in-out, 
+                background-color 0.1s linear;
+  }
+  .text_op{   
+    content:"";position:absolute;
+    background-color:rgb(36, 35, 34);
+    left:35%;bottom: 37%;opacity: 0.7;
+    width:40%;height: 37%;
+    animation: lightning 0.5s ease-out; 
+}
+
+@keyframes lightning { 
+    0% {
+        background-color: rgb(36, 35, 34);
+    }
+    10% {
+        background-color: rgb(70, 69, 68); 
+    }
+    100% {
+        background-color: rgb(36, 35, 34); 
+    }
+}
